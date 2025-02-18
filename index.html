@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Entry Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/343741ebda.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class=" px-[100px]">
+        <header class="flex justify-between items-center py-[30px] border-b-[1px] border-gray-400">
+            <h1 class="font-semibold text-[24px]">Warehouse Entry Form</h1>
+            <div class="flex justify-end items-center gap-[15px]">
+                <button type="button" class="bg-blue-400 py-[8px] px-[15px] rounded-[10px] text-white"><a href="/index.html"><i class="fa-solid fa-gauge mr-[5px]"></i>Dashboard</a></button>
+                <button type="button" class="bg-blue-400 py-[8px] px-[15px] rounded-[10px] text-white"><a href=""><i class="fa-solid fa-list mr-[5px]"></i>Warehouses List</a></button>
+                <label for="Date">Date:</label>
+                <input type="date" placeholder="Enter Your Date" class="border-[1px] border-gray-400 py-[8px] px-[15px] rounded-[10px]">
+            </div>
+        </header>
+
+        <form class="py-[50px] border-gray-400 border-b-[1px]">
+            <fieldset class="border-[1px] border-gray-400 p-[15px] flex justify-center gap-[70px] flex-wrap my-[30px]">
+                <legend class="text-[20px] font-semibold text-center">Warehouse Details</legend>
+
+                <div class="w-[350px]">
+                    <label for="ID">ID</label><br>
+                    <input type="text" placeholder="UID-2025-002" class="border-gray-400 border-[1px] px-[5px] w-[350px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[350px]">
+                    <label for="Warehouse Name">Warehouse Name</label><br>
+                    <input type="text" placeholder="Enter Warehouse Name" class="border-gray-400 border-[1px] px-[5px] w-[350px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+            </fieldset>
+
+            <button type="submit" class="bg-blue-500 px-[15px] py-[10px] rounded-[10px] float-right mb-[20px] font-semibold text-white"><i class="fa-solid fa-floppy-disk mr-[5px]"></i> Save</button>
+
+            <h1 class="font-semibold text-[24px]">Warehouses List</h1>   
+        </form>
+
+        <table  class="w-full ">
+            <thead class="border-gray-300 border-b-[1px]">
+                <tr>
+                    <th>Code</th>
+                    <th>Warehouse Name</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody >
+                <tr id="table1">
+                    <td>UID-2025-0001</td>
+                    <td>Storage Warehouse</td>
+                    <td>18-02-2025</td>
+                    <td class="flex justify-center items-center gap-[10px]">
+                        <button class="bg-blue-600 text-white px-[5px] "><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button onclick="deletTable()" class="bg-red-600 text-white px-[5px] "><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+                
+            </tbody>
+       </table>
+    </div>
+</body>
+</html>
